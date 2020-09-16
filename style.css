@@ -1,0 +1,216 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    background-color: #6155cf;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+
+    /* overflow: hidden; */
+
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.container form.register-form,
+.container form.login-form {
+    display: flex;
+    margin: 3rem auto;
+    flex-direction: column;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    animation: fade 0.2s;
+}
+
+.container form header {
+    display: flex;
+    flex-direction: column;
+
+    animation: moveFromUpside 400ms;
+}
+
+.container form header h2 {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.container form section {
+    display: flex;
+    flex-direction: column;
+    width: 40vh;
+}
+
+.container form section .field {
+    margin-top: 3rem;
+}
+
+.container form section .field:nth-child(1) {
+    animation: move .5s backwards;
+}
+
+.container form section .field:nth-child(2) {
+    animation: move .5s backwards;
+    animation-delay: .1s;
+}
+
+.container form section .field input {
+    width: 90%;
+    padding: .5rem;
+
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+
+    outline: none;
+
+    color: white;
+    font-size: 2rem;
+
+    transition: .2s;
+}
+
+.container form section .field input:focus {
+    padding: .5rem 1rem;
+    background-color: #6f63da;
+}
+
+.container form section .field label {
+    display: flex;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.container form section button[type=submit] {
+    display: flex;
+    width: 95%;
+    padding: 1rem;
+    justify-content: center;
+    border: 1px solid white;
+    margin: 4rem auto;
+
+    background-color: transparent;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+
+    box-shadow: 3px 3px 3px #00000007;
+
+    transition: .2s;
+}
+
+.container form section button[type=submit]:hover {
+    width: 100%;
+    background-color: #6f63da;
+}
+
+.container form section .button-container :nth-child(2) {
+    display: flex;
+    margin: auto;
+    padding: .8rem 2rem;
+    border: 0;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+
+    color: white;
+    font-size: 1.2rem;
+
+    box-shadow: 3px 3px 3px #00000007;
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.container form section .button-container :nth-child(2):hover {
+    padding: .8rem 3rem;
+}
+
+.container form header img {
+    width: 26px;
+
+    margin-right: 1rem;
+}
+
+.up {
+    animation: up .8s forwards;
+    animation-timing-function: ease-in;
+}
+
+.down {
+    animation: down .8s forwards;
+    animation-timing-function: ease-in;
+}
+
+.container form section .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container form section .grid label {
+    margin: 0 1rem;
+    padding: 0;
+
+    display: flex;
+
+    text-align: start;
+    justify-content: left;
+    align-items: center;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    } to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes move {
+    from {
+        opacity: 0;
+        transform: translateX(-30%);
+    } to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes moveFromUpside {
+    from {
+        opacity: 0;
+        transform: translateY(-90%);
+    } to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes up {
+    from {
+        transform: translateY(0);
+    } to {
+        transform: translateY(-66vh);
+    }
+}
+
+@keyframes down {
+    from {
+        transform: translateY(-66vh);
+    } to {
+        transform: translateY(0);
+    }
+}

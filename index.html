@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    
+    <div class="container login">
+        <form class="login-form">
+            <header>
+                <h1>
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/1828/1828464.svg" alt="Login Image">
+                    Login
+                </h1>
+                <h2>
+                    Estamos ansiosos para te ver mais uma vez.
+                </h2>
+            </header>
+
+            <section>
+                <div class="field">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username">
+                </div>
+            
+                <div class="field">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password">
+                </div>
+
+                <div class="button-container">
+                    <button type="submit">Pronto!</button>
+                    <button class="change-screen">Não tenho uma conta</button>
+                </div>
+
+            </section>
+        </form>
+    </div>
+
+    <div class="container register hide">
+        <form class="register-form">
+            <header>
+                <h1>
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/2921/2921222.svg" alt="Login Image">
+                    Registrar-se
+                </h1>
+            </header>
+
+            <section>
+                <div class="field grid">
+                    <label for="username-register">Usuário</label>
+                    <input type="text" id="username-register">
+                </div>
+            
+                <div class="field grid">
+                    <label for="user-photo">Foto do usuário</label>
+                    <input type="url" id="user-photo">
+                </div>
+
+                <div class="field">
+                    <label for="password-register">Senha</label>
+                    <input type="password" id="password-register">
+                </div>
+
+                <div class="field">
+                    <label for="password-confirm">Senha</label>
+                    <input type="password" id="password-confirm">
+                </div>
+
+                <div class="button-container">
+                    <button type="submit">Pronto!</button>
+                    <button class="change-screen">Quero me logar!</button>
+                </div>
+
+            </section>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
