@@ -193,6 +193,30 @@ body {
     align-items: center;
 }
 
+.container .delete-account {
+    /* display: flex; */
+
+    margin: 2rem auto;
+
+    padding: .8rem 2rem;
+    border: 1px solid red;
+    border-radius: .2rem;
+    background-color: red;
+
+    color: white;
+    font-size: 1.2rem;
+
+    box-shadow: 3px 3px 3px #00000007;
+    outline: none;
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.container form.register-form section .button-container .delete-account:hover {
+    padding: .8rem 3rem;
+}
+
 @keyframes fade {
     from {
         opacity: 0;
