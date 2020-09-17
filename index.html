@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    
     <title>Login</title>
 </head>
 <body>
@@ -47,6 +49,10 @@
                     <img src="https://www.flaticon.com/svg/static/icons/svg/2921/2921222.svg" alt="Login Image">
                     Registrar-se
                 </h1>
+                <h2>
+                    O primeiro passo para fazer parte desta comuidade <br>
+                    é preencher este formulário.
+                </h2>
             </header>
 
             <section>
@@ -66,12 +72,12 @@
                 </div>
 
                 <div class="field">
-                    <label for="password-confirm">Senha</label>
+                    <label for="password-confirm">Confirme sua senha</label>
                     <input type="password" id="password-confirm">
                 </div>
 
                 <div class="button-container">
-                    <button type="submit">Pronto!</button>
+                    <button type="submit">Registrar!</button>
                     <button class="change-screen">Quero me logar!</button>
                 </div>
 
@@ -79,6 +85,7 @@
         </form>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: 100vh;
+    height: 90vh;
 
     /* overflow: hidden; */
 
@@ -24,7 +24,6 @@ body {
 .container form.register-form,
 .container form.login-form {
     display: flex;
-    margin: 3rem auto;
     flex-direction: column;
 
     text-align: center;
@@ -34,6 +33,14 @@ body {
     animation: fade 0.2s;
 }
 
+.container form.login-form {
+    margin: 3rem auto;
+}
+
+.container form.register-form {
+    margin: 1.5rem auto;
+}
+
 .container form header {
     display: flex;
     flex-direction: column;
@@ -41,15 +48,20 @@ body {
     animation: moveFromUpside 400ms;
 }
 
+.container form header h1 {
+    text-shadow: 8px 8px 2px  rgba(0, 0, 0, 0.192);
+}
+
 .container form header h2 {
     font-weight: 500;
     font-size: 1.4rem;
+    line-height: 2rem;
 }
 
 .container form section {
     display: flex;
     flex-direction: column;
-    width: 40vh;
+    width: 30vw;
 }
 
 .container form section .field {
@@ -57,12 +69,22 @@ body {
 }
 
 .container form section .field:nth-child(1) {
-    animation: move .5s backwards;
+    animation: move .5s forwards;
 }
 
 .container form section .field:nth-child(2) {
-    animation: move .5s backwards;
+    animation: move .5s forwards;
     animation-delay: .1s;
+}
+
+.container form section .field:nth-child(3) {
+    animation: move .5s backwards;
+    animation-delay: .2s;
+}
+
+.container form section .field:nth-child(4) {
+    animation: move .5s backwards;
+    animation-delay: .3s;
 }
 
 .container form section .field input {
@@ -90,6 +112,8 @@ body {
     display: flex;
     margin-bottom: 1rem;
     margin-left: 1rem;
+
+    text-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.11);
 }
 
 .container form section button[type=submit] {
@@ -105,6 +129,7 @@ body {
     font-size: 1.4rem;
     border-radius: 30px;
     cursor: pointer;
+    outline: none;
 
     box-shadow: 3px 3px 3px #00000007;
 
@@ -114,6 +139,10 @@ body {
 .container form section button[type=submit]:hover {
     width: 100%;
     background-color: #6f63da;
+}
+
+.container form section button[type=submit]:focus {
+    background-color: #877edf;
 }
 
 .container form section .button-container :nth-child(2) {
@@ -128,6 +157,7 @@ body {
     font-size: 1.2rem;
 
     box-shadow: 3px 3px 3px #00000007;
+    outline: none;
     cursor: pointer;
 
     transition: .2s;
@@ -137,20 +167,14 @@ body {
     padding: .8rem 3rem;
 }
 
+.container form section .button-container :nth-child(2):focus {
+    background-color: #877edf;
+}
+
 .container form header img {
     width: 26px;
 
     margin-right: 1rem;
-}
-
-.up {
-    animation: up .8s forwards;
-    animation-timing-function: ease-in;
-}
-
-.down {
-    animation: down .8s forwards;
-    animation-timing-function: ease-in;
 }
 
 .container form section .grid {
@@ -199,18 +223,36 @@ body {
     }
 }
 
-@keyframes up {
-    from {
-        transform: translateY(0);
-    } to {
-        transform: translateY(-66vh);
+@media (max-width: 600px) {
+    .container form header h2 {
+        font-size: 1rem;
+    }
+
+    .container form section {
+        width: 70vw;
+    }
+
+    .container form section .button-container button {
+        font-size: 1.2rem;
+    }
+
+    .container form section .field input {
+        font-size: 1.4rem;
+    }
+
+    .container form section .grid {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .container form section .grid input {
+        margin: auto;
     }
 }
 
-@keyframes down {
-    from {
-        transform: translateY(-66vh);
-    } to {
-        transform: translateY(0);
+@media (max-width: 1800px) {
+    .container form section {
+        width: 60vw;
     }
 }
